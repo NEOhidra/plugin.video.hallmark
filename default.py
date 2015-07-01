@@ -227,7 +227,7 @@ def getVideo(bcid):
           try:
             if '<span' in caption: caption = re.compile('<span.+?>(.+?)</span').search(caption).group(1)
           except: pass
-          caption = caption.replace('<br/>','\n').replace('&gt;','>').replace('&apos;',"'").replace('&quot','"')
+          caption = caption.replace('<br/>','\n').replace('&gt;','>').replace('&apos;',"'").replace('&quot;','"')
           ofile.write( '%s\n%s --> %s\n%s\n\n' % (idx, cstart, cend, caption))
           idx += 1
         ofile.close()
